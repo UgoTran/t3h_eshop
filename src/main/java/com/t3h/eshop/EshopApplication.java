@@ -15,13 +15,4 @@ public class EshopApplication {
 		SpringApplication.run(EshopApplication.class, args);
 	}
 
-	@Bean
-	public PhysicalNamingStrategy physical() {
-		return new PhysicalNamingStrategyStandardImpl();
-	}
-
-	@Bean
-	public ImplicitNamingStrategy implicit() {
-		return new ImplicitNamingStrategyLegacyJpaImpl();
-	}
 }
