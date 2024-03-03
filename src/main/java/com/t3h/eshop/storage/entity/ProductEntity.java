@@ -16,7 +16,7 @@ public class ProductEntity {
     private int categoryId;
     private String shortDescription;
     private String productFeatures;
-    private BigDecimal sellingPrice;
+    private double sellingPrice;
     private String image1;
     private String image2;
 }

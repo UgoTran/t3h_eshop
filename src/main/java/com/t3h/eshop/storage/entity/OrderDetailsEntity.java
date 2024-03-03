@@ -14,5 +14,5 @@ public class OrderDetailsEntity {
     private int orderId;
     private int productId;
     private int quantity;
-    private BigDecimal priceEach;
+    private double priceEach; //double
 }

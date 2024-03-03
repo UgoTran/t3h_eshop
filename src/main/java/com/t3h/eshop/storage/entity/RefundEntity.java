@@ -15,7 +15,7 @@ public class RefundEntity {
     private int refundId;
     private int orderId;
     private int productId;
-    private BigDecimal refundAmount;
+    private double refundAmount;
     private String status;
     private LocalDateTime updateAt = LocalDateTime.now();
 }
