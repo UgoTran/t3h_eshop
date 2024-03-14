@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Data
 public class OrderEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String orderId;
     private LocalDateTime orderDate;
     private LocalDate expectedDeliveryDate;

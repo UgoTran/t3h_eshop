@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>admin_login</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: silver;
+        }
+
+
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        h2{
+            color: deeppink;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+        .input-box{
+            position: relative;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        input{
+            width:330px;
+            height:45px;
+            border-radius: 5px;
+            border-color: #f0f0f0;
+            border-style: solid;
+            color:#c0c0c0;
+            font-size: 15px;
+            margin:auto;
+        }
+        .login-reset{
+            margin:20px 0 0 85px;
+            font-size: 20px;
+            color:#c0c0c0 ;
+        }
+        .register{
+            color: deeppink;
+            text-decoration: none;
+        }
+        .button-container{
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button{
+            width:100px;
+            height: 50px;
+            background-color: deeppink;
+            border-radius: 5px;
+            border-color: deeppink;
+            color: #f0f0f0;
+            font-size: 20px;
+            text-align: center;
+            }
+        .button:hover{
+            background-color: #ffffff;
+            color: deeppink;
+        }
+        .login-error{
+            color: deeppink;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Online Shopping CMS</h2>
+    <form th:action="@{/admin/login}">
+        <div class="input-box">
+            <input type="email" id="emailInput" name="username" placeholder="     Username">
+        </div>
+        <div class="input-box">
+            <input type="password" id="passwordInput" name="pass" placeholder="     Password">
+        </div>
+        <div class="login-reset">
+            <a href="http://localhost:63342/eshop/src/main/resources/static/Media/ResetPassword.html?_ijt=f8anh3a67cag1v13aiddg6su81&_ij_reload=RELOAD_ON_SAVE"
+               class = "register">Forgot Password?</a>
+
+        </div>
+        <div class="button-container">
+        <button type="button" class = "button" onclick="login()">LOGIN</button>
+        </div>
+        <div class="login-error" id="loginError"></div>
+    </form>
+
+
+
+</div>
+<script>
+    function login() {
+        var email = document.getElementById('emailInput').value.trim();
+        var password = document.getElementById('passwordInput').value.trim();
+        var loginError = document.getElementById('loginError');
+
+        if (email === '' || password === '') {
+            loginError.textContent = 'Please enter your username and password!';
+        } else {
+            // Perform login process here
+            // For demonstration, you can use console.log to see the values
+            console.log('Email:', email);
+            console.log('Password:', password);
+            // Clear any previous error messages
+            loginError.textContent = '';
+        }
+    }
+
+
+</script>
+
+</body>
+</html>
