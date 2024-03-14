@@ -11,8 +11,11 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+import static com.t3h.eshop.configuration.RequestMatcher.PREMIT_URL;
+
 @Configuration
-@EnableWebSecurity
+@Order(2)
+@EnableWebSecurity(debug = true)
 public class AdminSecurityConfig{
     @Bean
     public LoginService loginService(){
@@ -28,7 +31,7 @@ public class AdminSecurityConfig{
     SecurityFilterChain web2(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/admin/login").permitAll()
+                        .requestMatchers(PREMIT_URL).permitAll()
                         .anyRequest().hasRole("ADMIN")
                 )
                 .formLogin(login -> login
