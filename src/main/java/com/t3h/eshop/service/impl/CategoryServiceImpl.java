@@ -12,6 +12,7 @@ import java.util.Optional;
 @Service
 public class CategoryServiceImpl implements CategoryService {
     @Autowired private CategoryRepo categoryRepo;
+
     @Override
     public List<CategoryEntity> getAllCategory() {
         return (List<CategoryEntity>) categoryRepo.findAll();

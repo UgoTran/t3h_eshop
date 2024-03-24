@@ -7,7 +7,10 @@ import java.util.Optional;
 
 public interface CategoryService {
     List<CategoryEntity> getAllCategory();
+
     void saveCate(CategoryEntity category);
+
     void deleteCate(int categoryId);
+
     Optional<CategoryEntity> findCateById(int categoryId);
 }

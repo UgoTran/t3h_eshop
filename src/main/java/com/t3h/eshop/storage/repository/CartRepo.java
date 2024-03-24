@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-public interface CartRepo extends JpaRepository<CartEntity,String> {
+public interface CartRepo extends JpaRepository<CartEntity, String> {
     @Query(value = "INSERT INTO cart (product_id, qty, user_id, selling_price, title) " +
             "SELECT p.product_id, :qty AS qty, :user_id AS user_id, p.selling_price, p.title " +
             "FROM product p " +

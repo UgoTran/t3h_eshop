@@ -15,14 +15,17 @@ import java.util.List;
 
 @Controller
 public class CheckoutController {
-    @Autowired private CustomerProfileService profileService;
-    @Autowired private CartService cartService;
+    @Autowired
+    private CustomerProfileService profileService;
+    @Autowired
+    private CartService cartService;
+
     @RequestMapping("/checkout")
-    public String checkout(Model model){
+    public String checkout(Model model) {
         List<CartEntity> cart = cartService.getAllCart();
-        model.addAttribute("cart",cart);
+        model.addAttribute("cart", cart);
         List<CustomerProfileEntity> customer = profileService.getAllCus();
-        model.addAttribute("customer",customer);
+        model.addAttribute("customer", customer);
         return "user/checkout";
     }
 }

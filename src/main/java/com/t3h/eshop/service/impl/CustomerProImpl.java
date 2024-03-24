@@ -7,9 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class CustomerProImpl implements CustomerProfileService {
-    @Autowired private CustomerRepo customerRepo;
+    @Autowired
+    private CustomerRepo customerRepo;
+
     @Override
     public List<CustomerProfileEntity> getAllCus() {
         return (List<CustomerProfileEntity>) customerRepo.findAll();

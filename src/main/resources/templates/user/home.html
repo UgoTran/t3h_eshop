@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>E-shop T3H</title>
     <link
             rel="stylesheet"
@@ -26,9 +26,9 @@
         <td th:text="${product.image1}"></td>
         <td>
             <form action="/add-to-cart" method="post">
-                <input type="hidden" name="productId" th:value="${product.product_id}" />
-                <input type="hidden" name="userId" value="1" />
-                <input type="number" name="qty" value="1" min="1" />
+                <input type="hidden" name="productId" th:value="${product.product_id}"/>
+                <input type="hidden" name="userId" value="1"/>
+                <input type="number" name="qty" value="1" min="1"/>
                 <button type="submit">Add to cart</button>
             </form>
         </td>
@@ -45,10 +45,10 @@
                 qty: qty,
                 userId: userId
             },
-            success: function(response) {
+            success: function (response) {
                 alert(response); // Hiển thị thông báo "Success"
             },
-            error: function(xhr, status, error) {
+            error: function (xhr, status, error) {
                 console.error(error); // Xử lý lỗi nếu có
             }
         });
@@ -74,10 +74,10 @@
                     qty: qty,
                     userId: userId
                 },
-                success: function(response) {
+                success: function (response) {
                     alert(response); // Hiển thị thông báo "Success"
                 },
-                error: function(xhr, status, error) {
+                error: function (xhr, status, error) {
                     console.error(error); // Xử lý lỗi nếu có
                 }
             });

@@ -15,15 +15,18 @@ import java.util.List;
 
 @Controller
 public class CartController {
-    @Autowired private CartService cartService;
+    @Autowired
+    private CartService cartService;
+
     @RequestMapping("/cart")
-    public String cart(Model model){
+    public String cart(Model model) {
         List<CartEntity> cart = cartService.getAllCart();
-        model.addAttribute("cart",cart);
+        model.addAttribute("cart", cart);
         return "/user/cart";
     }
-    @RequestMapping(value = "/delete",method = RequestMethod.GET)
-    public ResponseEntity deleteCart(@RequestParam("cart_id") int cart_id ){
+
+    @RequestMapping(value = "/delete", method = RequestMethod.GET)
+    public ResponseEntity deleteCart(@RequestParam("cart_id") int cart_id) {
         cartService.deleteCart(cart_id);
         return ResponseEntity.ok("Delete Success");
     }
