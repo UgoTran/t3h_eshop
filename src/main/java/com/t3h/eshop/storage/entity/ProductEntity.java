@@ -11,12 +11,12 @@ import java.math.BigDecimal;
 public class ProductEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int productId;
-    private String tilte;
-    private int categoryId;
-    private String shortDescription;
-    private String productFeatures;
-    private double sellingPrice;
+    private int product_id;
+    private String title;
+    private int category_brand_id;
+    private String short_description;
+    private String product_features;
+    private double selling_price;
     private String image1;
     private String image2;
 }
