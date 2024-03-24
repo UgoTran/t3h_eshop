@@ -9,10 +9,10 @@ import lombok.Data;
 public class CartEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int cart_id;
-    private int product_id;
+    private int cartId;
+    private int productId;
     private int qty;
-    private int user_id;
+    private int userId;
     private String title;
-    private double selling_price;
+    private double sellingPrice;
 }

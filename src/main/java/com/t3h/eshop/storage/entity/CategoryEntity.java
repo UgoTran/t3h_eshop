@@ -9,7 +9,7 @@ import lombok.Data;
 public class CategoryEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int category_id;
+    private int categoryId;
     private String title;
-    private String image_link;
+    private String imageLink;
 }

@@ -26,8 +26,8 @@ public class CartController {
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.GET)
-    public ResponseEntity deleteCart(@RequestParam("cart_id") int cart_id) {
-        cartService.deleteCart(cart_id);
+    public ResponseEntity deleteCart(@RequestParam("cart_id") int cardId) {
+        cartService.deleteCart(cardId);
         return ResponseEntity.ok("Delete Success");
     }
 
